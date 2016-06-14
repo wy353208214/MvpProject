@@ -9,8 +9,6 @@ import wangyang.zun.com.mvpproject.presenter.Presenter;
 /**
  * Created by pc on 2016/4/28.
  */
-public interface ViewInterface {
-
+public interface AppViewInterface extends BaseViewInterface{
     void showAppList(List<PackageInfo> packageInfos);
-    void setPresenter(Presenter presenter);
 }

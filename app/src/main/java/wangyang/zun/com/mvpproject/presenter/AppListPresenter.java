@@ -5,26 +5,27 @@ import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.List;
 
 import wangyang.zun.com.mvpproject.service.AppClassLoader;
-import wangyang.zun.com.mvpproject.view.viewinterface.ViewInterface;
+import wangyang.zun.com.mvpproject.view.viewinterface.AppViewInterface;
 
 /**
  * Created by pc on 2016/4/26.
  */
 public class AppListPresenter implements Presenter, LoaderManager.LoaderCallbacks<List<PackageInfo>>{
 
-    private ViewInterface viewInterface;
+    private AppViewInterface viewInterface;
     private AppClassLoader appClassLoader;
     private LoaderManager loaderManager;
 
     private final int id = 0;
 
 
-    public AppListPresenter(ViewInterface viewInterface, AppClassLoader appClassLoader, LoaderManager loaderManager) {
+    public AppListPresenter(AppViewInterface viewInterface, AppClassLoader appClassLoader, LoaderManager loaderManager) {
         this.viewInterface = viewInterface;
         this.appClassLoader = appClassLoader;
         this.loaderManager = loaderManager;
@@ -38,7 +39,7 @@ public class AppListPresenter implements Presenter, LoaderManager.LoaderCallback
 
     @Override
     public void start() {
-
+        Log.d(getClass().getCanonicalName(), "start ");
     }
 
     @Override

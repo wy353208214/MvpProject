@@ -18,10 +18,10 @@ import wangyang.zun.com.mvpproject.adapter.MyAppListRecyclerViewAdapter;
 import wangyang.zun.com.mvpproject.adapter.RecyleItemDecoration;
 import wangyang.zun.com.mvpproject.presenter.Presenter;
 import wangyang.zun.com.mvpproject.view.RecycleOnItemClickListener;
-import wangyang.zun.com.mvpproject.view.viewinterface.ViewInterface;
+import wangyang.zun.com.mvpproject.view.viewinterface.AppViewInterface;
 
 
-public class AppListFragment extends Fragment implements ViewInterface {
+public class AppListFragment extends Fragment implements AppViewInterface {
 
     private Presenter presenter;
 
@@ -30,7 +30,7 @@ public class AppListFragment extends Fragment implements ViewInterface {
     private MyAppListRecyclerViewAdapter myAppListRecyclerViewAdapter;
 
 
-    private AppListFragment() {
+    public AppListFragment() {
 
     }
 
